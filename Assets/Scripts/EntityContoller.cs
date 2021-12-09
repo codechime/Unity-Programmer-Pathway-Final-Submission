@@ -24,6 +24,7 @@ public class EntityContoller : MonoBehaviour
 
     protected bool useHorizontalInput = false;
 
+    // ABSTRACTION
     bool IsOutOfBounds(Vector3 positionDelta)
     {
         Vector3 proposedPosition = transform.position + positionDelta;
@@ -38,13 +39,14 @@ public class EntityContoller : MonoBehaviour
         return false;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    // POLYMORPHISM
+    protected void Instantiate(GameObject item)
     {
-        
+        Instantiate(item, transform.position,
+                    item.transform.rotation);
     }
 
-    // Update is called once per frame
+    // ABSTRACTION
     protected void Update()
     {
         // Get a value for horizontal input

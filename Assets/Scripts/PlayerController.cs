@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class PlayerController : EntityContoller
 {
+    // ENCAPSULATION
     [SerializeField]
     private GameObject projectilePrefab;
 
@@ -21,8 +23,7 @@ public class PlayerController : EntityContoller
         if(Input.GetKeyUp(KeyCode.Space))
         {
             // Launch a projectile
-            Instantiate(projectilePrefab, transform.position,
-                        projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab);
         }
     }
 }
