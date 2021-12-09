@@ -6,7 +6,7 @@ public class EntityContoller : MonoBehaviour
 {
     // This is the object that will respond to input
     [SerializeField]
-    private GameObject entity;
+    private GameObject controllableEntity;
 
     // The distance to move in the horizontal direction
     protected float horizontalDelta = 0;
